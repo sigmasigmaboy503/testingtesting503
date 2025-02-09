@@ -1,3 +1,6 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
@@ -119,7 +122,7 @@ UICorner.Parent = MainFrame
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0, 40)
 Title.Position = UDim2.new(0, 0, 0, 0)
-Title.Text = "INJURED_BROTHER gui"
+Title.Text = "Super Ring Parts v4"
 Title.TextColor3 = Color3.fromRGB(153, 0, 0) -- Dark brown
 Title.BackgroundColor3 = Color3.fromRGB(255, 51, 51) -- Lighter brown
 Title.Font = Enum.Font.Fondamento -- More elegant font
@@ -134,7 +137,7 @@ TitleCorner.Parent = Title
 local ToggleButton = Instance.new("TextButton")
 ToggleButton.Size = UDim2.new(0.8, 0, 0, 35)
 ToggleButton.Position = UDim2.new(0.1, 0, 0.3, 0)
-ToggleButton.Text = "nigga ts off"
+ToggleButton.Text = "Ring Parts Off"
 ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 0, 255) -- Sienna
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- Cornsilk
 ToggleButton.Font = Enum.Font.Fondamento
@@ -194,7 +197,7 @@ RadiusCorner.Parent = RadiusDisplay
 local Watermark = Instance.new("TextLabel")
 Watermark.Size = UDim2.new(1, 0, 0, 20)
 Watermark.Position = UDim2.new(0, 0, 1, -20)
-Watermark.Text = "gui by radzsocials"
+Watermark.Text = "Super Ring [V4] by lukas"
 Watermark.TextColor3 = Color3.fromRGB(255, 255, 255) -- Dark brown
 Watermark.BackgroundTransparency = 1
 Watermark.Font = Enum.Font.Fondamento
@@ -308,7 +311,7 @@ end
 local radius = 50
 local height = 100
 local rotationSpeed = 1
-local attractionStrength = 10000
+local attractionStrength = 1000
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
@@ -374,7 +377,7 @@ end)
 -- Button functionality
 ToggleButton.MouseButton1Click:Connect(function()
     ringPartsEnabled = not ringPartsEnabled
-    ToggleButton.Text = ringPartsEnabled and "mf ts on" or "mf ts off"
+    ToggleButton.Text = ringPartsEnabled and "Ring Parts On" or "Ring Parts Off"
     ToggleButton.BackgroundColor3 = ringPartsEnabled and Color3.fromRGB(50, 205, 50) or Color3.fromRGB(160, 82, 45)
     playSound("12221967")
 end)
@@ -392,13 +395,13 @@ IncreaseRadius.MouseButton1Click:Connect(function()
 end)
 
 -- Get player thumbnail
-local userId = Players:GetUserIdFromNameAsync("leavemycircle")
+local userId = Players:GetUserIdFromNameAsync("Robloxlukasgames")
 local thumbType = Enum.ThumbnailType.HeadShot
 local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 StarterGui:SetCore("SendNotification", {
-    Title = "This is a exploiters shit.",
+    Title = "Super ring parts V4",
     Text = "enjoy",
     Icon = content,
     Duration = 5
@@ -413,3 +416,6 @@ local function SendChatMessage(message)
         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
     end
 end
+
+-- Send the chat message
+SendChatMessage("hi")
