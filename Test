@@ -374,7 +374,7 @@ end)
 -- Button functionality
 ToggleButton.MouseButton1Click:Connect(function()
     ringPartsEnabled = not ringPartsEnabled
-    ToggleButton.Text = ringPartsEnabled and "nigga ts on" or "nigga ts off"
+    ToggleButton.Text = ringPartsEnabled and "mf ts on" or "mf ts off"
     ToggleButton.BackgroundColor3 = ringPartsEnabled and Color3.fromRGB(50, 205, 50) or Color3.fromRGB(160, 82, 45)
     playSound("12221967")
 end)
@@ -392,13 +392,13 @@ IncreaseRadius.MouseButton1Click:Connect(function()
 end)
 
 -- Get player thumbnail
-local userId = Players:GetUserIdFromNameAsync("INJURED_BROTHER")
+local userId = Players:GetUserIdFromNameAsync("leavemycircle")
 local thumbType = Enum.ThumbnailType.HeadShot
 local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 StarterGui:SetCore("SendNotification", {
-    Title = "INJURED_BROTHER's gui",
+    Title = "This is a exploiters shit.",
     Text = "enjoy",
     Icon = content,
     Duration = 5
